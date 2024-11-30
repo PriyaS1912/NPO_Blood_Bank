@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Indian Red Cross</title>
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: auto; 
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column; 
+            margin-left: 10px;
+        }
+
+        .logo-text .line {
+            font-size: 15px; 
+            font-weight: bold;
+            color: white;
+            text-align: left; 
+        }
+
+        nav {
+            flex-grow: 1; 
+            text-align: center; 
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex; 
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            position: relative; 
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        .dropdown-content li {
+            display: block;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            padding: 10px;
+            text-align: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #ddd;
+            color: #c8102e;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .hero {
+            position: relative;
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+            background: url('about-us-hero.jpg') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #c8102e;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .about-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .about-section img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-text {
+    max-width: 600px;
+    flex: 1;
+    margin-right: 30px; 
+    padding: 20px; 
+    border-radius: 8px; 
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.image-div img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+.impact-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    text-align: left; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.impact-details {
+    margin-top: 40px;
+    padding: 5px;
+    line-height: 1.8em;
+    text-align: left;
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.impact-details h3 {
+    font-size: 1.5em; 
+    color: #c8102e;
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+
+.impact-details p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    margin-left: 0; 
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0 10px;
+    text-align: center; 
+}
+
+.impact-stat {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #c8102e;
+    padding: 20px;
+}
+
+.impact-stat p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+        .mission-section {
+            margin-top: 40px;
+        }
+
+        .team-section {
+            padding: 40px 0;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .team-member h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .impact-section {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .impact-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .impact-stat {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #c8102e;
+        }
+
+        .impact-stat p {
+            font-size: 1em;
+            color: #555;
+        }
+        
+        footer {
+            background-color: #c8102e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="redcross.png" alt="Red Cross Logo">
+            <div class="logo-text"> 
+                <span class="line">Indian</span>
+                <span class="line">Red</span>
+                <span class="line">Cross</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="About Us.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#our-history">Our History</a></li>
+                        <li><a href="#what-we-do">What We Do</a></li>
+                        <li><a href="#our-impact">Our Impact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Get Involved.html">Get Involved</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Youth/Junior Red Cross</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Publications.html">Publications</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Donate.html">Donate</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Blood</a></li>
+                        <li><a href="#">Plasma</a></li>
+                        <li><a href="#">Financially</a></li>
+                    </ul>
+                    </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>About Us</h1>
+        </section>
+
+        <section class="content about-section" id="about-us">
+            <h2>About Us</h2>
+            <p>The Indian Red Cross is a voluntary humanitarian organization having a network of over 1200 branches throughout the country, providing relief in times of disasters/emergencies and promoting health & care of the vulnerable people and communities. It is a leading member of the largest independent humanitarian organization in the world, the International Red Cross & Red Crescent Movement. The movement has three main components, the International Committee of Red Cross (ICRC), National Societies and International Federation of Red Cross and Red Crescent Societies.</p>
+            <p>The Mission of the Indian Red Cross is to inspire, encourage and initiate at all times all forms of humanitarian activities so that human suffering can be minimized and even prevented and thus contribute to creating a more congenial climate for peace.</p>
+        </section>
+
+        <section class="content about-section" id="our-history">
+            <h2>Our History</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <ul>
+                        <li>Indian Red Cross Society (IRCS) was established in 1920 under the Indian Red Cross Society Act and incorporated under Parliament Act XV of 1920. The act was last amended in 1992 and rules were formed in 1994.</li>
+                        <li>The IRCS has 36 State / Union Territories Branches with their more than 1200 district and sub-district branches.</li>
+                        <li>The Honourable President of India is the President, and the Honourable Union Health Minister is the Chairman of the Society.</li>
+                        <li>The Vice Chairman is elected by the members of the Managing Body.</li>
+                        <li>The National Managing Body consists of 18 members:
+                            <ul>
+                                <li>The Chairman and 6 members are nominated by the President.</li>
+                                <li>The remaining 12 members are elected by state and union territory branches through an electoral college.</li>
+                            </ul>
+                        </li>
+                        <li>The Managing Body is responsible for governance and supervision of the Society’s functions through a number of committees.</li>
+                        <li>The Secretary General is the Chief Executive of the Society.</li>
+                    </ul>
+                </div>
+                <div class="image-container">
+                    <div class="image-div">
+                        <img src="1.jpg" alt="IRCS History Image 1">
+                    </div>
+                    
+                    <div class="image-div">
+                        <img src="work.jpeg" alt="IRCS History Image 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+        <section class="content team-section">
+            <h2></h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="president.jpg" alt="Team Member 1">
+                    <h3>Smt. Droupadi Murmu</h3>
+                    <p>President</p>
+                </div>
+                <div class="team-member">
+                    <img src="union minister.jpeg" alt="Team Member 2">
+                    <h3>Shri Jagat Prakash Nadda</h3>
+                    <p>Chairman</p>
+                </div>
+                <div class="team-member">
+                    <img src="secretary.jpeg" alt="Team Member 3">
+                    <h3>Utpal Kumar Singh</h3>
+                    <p>Chief Executive</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content about-section" id="what-we-do">
+            <h2>What We Do</h2>
+            <p>The Indian Red Cross Society is engaged in various initiatives to support communities across India. Explore some of our key programs:</p>
+            <center><a href="#first-aid">First Aid</a></center>
+            <center><a href="#blood-centre">Blood Centre</a></center>
+            <center><a href="#youth-program">Youth Program</a></center>
+            <center><a href="#livelihood">Livelihood Program</a></center>
+            <center><a href="#family-news">Family News Service</a></center>
+            <center><a href="#resilience-partners">Partners for Resilience</a></center>
+            <center><a href="#tb-program">Tuberculosis (TB) Program</a></center>
+            <center><a href="#education-training">Education and Training Program</a></center>            
+            <center><a href="#serv">Social Emergency Response Volunteers (SERV)</a></center>
+
+        </section>        
+
+        <section class="content impact-section" id="our-impact">
+            <h2>Our Impact</h2>
+            <p>Since our founding, the Indian Red Cross has been at the forefront of disaster relief and humanitarian efforts, making a tangible difference in the lives of those affected by crises and emergencies.</p>
+            
+            <div class="impact-details">
+                <h3>Disaster Relief</h3>
+                <p>Providing immediate aid to communities struck by natural and man-made disasters, ensuring timely delivery of food, shelter, and medical care.</p>
+        
+                <h3>Healthcare Initiatives</h3>
+                <p>Offering health services through blood donation drives, first aid training, mobile medical units, and community health programs to improve public health.</p>
+        
+                <h3>Social Inclusion</h3>
+                <p>Supporting vulnerable groups, including women, children, the elderly, and the differently-abled, by offering sustainable programs for their empowerment and rehabilitation.</p>
+        
+                <h3>Education and Preparedness</h3>
+                <p>Training volunteers and communities in disaster preparedness, first aid, and public health awareness to build resilient societies.</p>
+        
+                <h3>Promoting Blood Donation</h3>
+                <p>As one of the leading organizations in blood collection and distribution, we ensure the availability of safe blood for those in need.</p>
+            </div>
+        
+            <div class="impact-stats">
+                <div class="impact-stat">
+                    <span>1200+</span>
+                    <p>Branches Nationwide</p>
+                </div>
+                <div class="impact-stat">
+                    <span>1M+</span>
+                    <p>People Helped</p>
+                </div>
+                <div class="impact-stat">
+                    <span>100K+</span>
+                    <p>Volunteers Mobilized</p>
+                </div>
+            </div>
+            <p>Through a vast network of volunteers and dedicated workers, the Indian Red Cross Society is building a stronger, healthier, and more compassionate nation. Our work continues to save lives, bring hope, and foster unity.</p>
+        </section>    
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indian Red Cross. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/ircsofficial">Facebook</a></li>
+            <li><a href="https://x.com/search?q=%40IndianRedCross&amp%3Bsrc=typd">Twitter</a></li>
+            <li><a href="https://www.instagram.com/indianredcross1/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/ircsnewdelhi/">Linkedin</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

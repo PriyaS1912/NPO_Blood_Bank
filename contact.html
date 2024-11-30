@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Indian Red Cross</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: auto; 
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column; 
+            margin-left: 10px;
+        }
+
+        .logo-text .line {
+            font-size: 15px; 
+            font-weight: bold;
+            color: white;
+            text-align: left; 
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            position: relative; 
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        .dropdown-content li {
+            display: block;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            padding: 10px;
+            text-align: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #ddd;
+            color: #c8102e;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .row div {
+            flex: 1; 
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            height: auto; 
+            display: flex;
+            flex-direction: column; 
+            gap: 10px; 
+        }
+
+        .general-info, .media-inquiries, .social-media, .head-office, .emergency-contact, .volunteer-services {
+            background-color: #d9cbcb;
+            color: #333;
+        }
+
+        .contact-section h2 {
+            color: #c8102e;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p {
+            color: black;
+        }
+
+        .contact-info {
+            margin: 0px 0; 
+            line-height: 1.5px; 
+        }
+
+        footer {
+            background-color: #c8102e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-media a {
+            color: #c8102e; 
+            text-decoration: none;
+        }
+
+        .social-media a:hover {
+            color: #8b0000; 
+            text-decoration: underline;
+        }
+
+        .media-inquiries p,
+        .head-office p,
+        .emergency-contact p,
+        .volunteer-services p {
+            margin-bottom: 15px; 
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="redcross.png" alt="Red Cross Logo">
+            <div class="logo-text"> 
+                <span class="line">Indian</span>
+                <span class="line">Red</span>
+                <span class="line">Cross</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="About Us.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#our-history">Our History</a></li>
+                        <li><a href="#what-we-do">What We Do</a></li>
+                        <li><a href="#our-impact">Our Impact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Get Involved.html">Get Involved</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Youth/Junior Red Cross</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Publications.html">Publications</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Donate.html">Donate</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Blood</a></li>
+                        <li><a href="#">Plasma</a></li>
+                        <li><a href="#">Financially</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-section">
+            <div class="row">
+                <div class="general-info">
+                    <h2>General Information and Feedback</h2>
+                    <p><strong>Toll-free phone:</strong> 8929338465, 7303640964</p>
+                    <p><strong>Email:</strong> <a href="mailto:support@ircsfa.org">support@ircsfa.org</a></p>
+                    <p><strong>Standard Mail:</strong><br>Indian Red Cross Society<br>1 Red Cross Road<br>New Delhi, 110001</p>
+                </div>
+                <div class="media-inquiries">
+                    <h2>Media Inquiries</h2>
+                    <p>For any media inquiries or requests for information regarding our initiatives, please reach out to us via phone or email. We are here to assist you.</p>
+                    <p><strong>Phone:</strong> 080-22264205</p>
+                    <p><strong>Email:</strong> <a href="mailto:media@indianredcross.org">media@indianredcross.org</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="social-media">
+                    <h2>Social Media</h2>
+                    <p>Find us on:</p>
+                    <p>
+                        <a href="https://www.facebook.com/ircsofficial" style="color:#c8102e;">Facebook</a> |
+                        <a href="https://x.com/search?q=%40IndianRedCross&amp%3Bsrc=typd" style="color:#c8102e;">Twitter</a> |
+                        <a href="https://www.instagram.com/indianredcross1/" style="color:#c8102e;">Instagram</a> |
+                        <a href="https://www.linkedin.com/company/ircsnewdelhi/" style="color:#c8102e;">LinkedIn</a>
+                    </p>
+                    <p>Our accounts are monitored Monday to Friday from 8 a.m. to 8 p.m. IST. Comments and tweets outside these hours are reviewed the next business day.</p>
+                    <p>We strive to create informative and engaging communities on social media and ask that users heed our Community Guidelines.</p>
+                </div>
+                <div class="head-office">
+                    <h2>Head Office</h2>
+                    <p>For inquiries related to our operations or services, please contact our Head Office directly via phone or email, and our team will be happy to assist you.</p>
+                       <p><strong>Telephone:</strong> 080-22264205</p>
+                       <p><strong>Fax:</strong> +91 44-123-4567</p>
+                       <p><strong>Address:</strong> 1 Red Cross Road, New Delhi, 110001</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="emergency-contact">
+                    <h2>Emergency Contact</h2>
+                    <p style="color: black;">If you are in need of immediate assistance, please reach out to our Emergency Contact team using the details below.</p>
+                    <p><strong>Phone:</strong>1-800-451-8346</p>
+                    <p><strong>Email:</strong> <a href="mailto:emergency@indianredcross.org">emergency@indianredcross.org</a></p>
+                </div>
+                <div class="volunteer-services">
+                    <h2>Philanthropy department</h2>
+                    <p style="color: black;">Our commitment to philanthropy drives us to support communities in need through various initiatives, ensuring that our resources and efforts create a lasting impact on those we serve.</p>
+                    <p><strong>Phone:</strong> 1800-419-8800</p>
+                    <p><strong>Email:</strong> <a href="mailto:volunteer@indianredcross.org">Philanthropy@indianredcross.org</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indian Red Cross. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/ircsofficial">Facebook</a></li>
+            <li><a href="https://x.com/search?q=%40IndianRedCross&amp%3Bsrc=typd">Twitter</a></li>
+            <li><a href="https://www.instagram.com/indianredcross1/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/ircsnewdelhi/">LinkedIn</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

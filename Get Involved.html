@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved | Indian Red Cross</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: auto; 
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column; 
+            margin-left: 10px;
+        }
+
+        .logo-text .line {
+            font-size: 15px; 
+            font-weight: bold;
+            color: white;
+            text-align: left; 
+        }
+
+        nav {
+            flex-grow: 1; 
+            text-align: center; 
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex; 
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            position: relative; 
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        .dropdown-content li {
+            display: block;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            padding: 10px;
+            text-align: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #ddd;
+            color: #c8102e;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #c8102e; 
+        }
+
+        p {
+            color: #000; 
+        }
+
+        .membership {
+            background-color: #f9f9f9; 
+        }
+
+        .volunteer {
+            background-color: #f9f9f9; 
+        }
+
+        .youth {
+            background-color: #f9f9f9; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #c8102e; 
+            color: white;
+        }
+
+        footer {
+            background-color: #c8102e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: white;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="redcross.png" alt="Red Cross Logo">
+            <div class="logo-text"> 
+                <span class="line">Indian</span>
+                <span class="line">Red</span>
+                <span class="line">Cross</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="About Us.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#our-history">Our History</a></li>
+                        <li><a href="#what-we-do">What We Do</a></li>
+                        <li><a href="#our-impact">Our Impact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Get Involved.html">Get Involved</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Youth/Junior Red Cross</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Publications.html">Publications</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Donate.html">Donate</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Blood</a></li>
+                        <li><a href="#">Plasma</a></li>
+                        <li><a href="#">Financially</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="membership">
+            <h2>Membership</h2>
+            <p>Individuals and institutions can enroll in different grades of membership by subscribing to the following membership fees:</p>
+            <table>
+                <tr>
+                    <th>Membership Type</th>
+                    <th>Fee</th>
+                </tr>
+                <tr>
+                    <td>Patron</td>
+                    <td>Rs. 25,000.00</td>
+                </tr>
+                <tr>
+                    <td>Vice-Patron</td>
+                    <td>Rs. 12,000.00</td>
+                </tr>
+                <tr>
+                    <td>Life Member</td>
+                    <td>Rs. 1,000.00</td>
+                </tr>
+                <tr>
+                    <td>Life Associate</td>
+                    <td>Rs. 250.00</td>
+                </tr>
+                <tr>
+                    <td>Annual Member</td>
+                    <td>Rs. 100.00 per annum</td>
+                </tr>
+                <tr>
+                    <td>Annual Associate</td>
+                    <td>Rs. 50.00 per annum</td>
+                </tr>
+                <tr>
+                    <td>Institutional Member</td>
+                    <td>Rs. 5,000.00 per annum</td>
+                </tr>
+            </table>
+            <p>All members are associated with the Red Cross worldwide. Membership certificates are issued by the national headquarters, signed by the Honorable President of India for Patron memberships and by the Chairman and Secretary General for other memberships.</p>
+            <p>Members can attend the Annual General Meeting, presided over by the Honorable President of India, and contribute to the noble cause of serving the most vulnerable through the Red Cross.</p>
+        </section>
+
+        <section class="volunteer">
+            <h2>Volunteer</h2>
+            <p>Volunteering has been at the heart of the Red Cross since its inception in 1920. Volunteers are the backbone of all Indian Red Cross activities, helping branches to run successful programs and assisting millions in need.</p>
+            <p>The IRCS recruits volunteers irrespective of race, ethnicity, sex, religious belief, age, and disability. All volunteers are entitled to become a Member of the Indian Red Cross Society, receive appropriate training for their roles, and can accept or refuse any task in accordance with the code of ethics.</p>
+            <p>If you want to become a volunteer, please contact your nearest State/UT/District Red Cross branch.</p>
+        </section>
+
+        <section class="youth">
+            <h2>Youth and Junior Red Cross</h2>
+            <p>A substantial portion of the Indian Red Cross Society's membership consists of young people. Young volunteers can significantly contribute to meeting the needs of vulnerable individuals in their communities through the Red Cross youth program.</p>
+            <p>Programs can begin at the start of the school/college term, but local branches can provide more information at any time. Contact your district Red Cross branch or state Red Cross branch for guidance.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indian Red Cross. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/ircsofficial">Facebook</a></li>
+            <li><a href="https://x.com/search?q=%40IndianRedCross&amp%3Bsrc=typd">Twitter</a></li>
+            <li><a href="https://www.instagram.com/indianredcross1/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/ircsnewdelhi/">Linkedin</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Indian Red Cross</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .logo-text .line {
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: left;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        .dropdown-content li {
+            display: block;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            padding: 10px;
+            text-align: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #ddd;
+            color: #c8102e;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            color: #c8102e;
+            margin-bottom: 20px;
+        }
+
+        .rectangle-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .publication-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .publication-item img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .publication-item h3 {
+            color: #c8102e;
+            margin-bottom: 10px;
+        }
+
+        .publication-item p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .button {
+            color: #c8102e;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #c8102e;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background-color: #c8102e;
+            color: white;
+        }
+
+        .rectangle-below {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #c8102e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: white;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .rectangle-below-second {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="redcross.png" alt="Red Cross Logo">
+            <div class="logo-text"> 
+                <span class="line">Indian</span>
+                <span class="line">Red</span>
+                <span class="line">Cross</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="About Us.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#our-history">Our History</a></li>
+                        <li><a href="#what-we-do">What We Do</a></li>
+                        <li><a href="#our-impact">Our Impact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Get Involved.html">Get Involved</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Youth/Junior Red Cross</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Publications.html">Publications</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Donate.html">Donate</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Blood</a></li>
+                        <li><a href="#">Plasma</a></li>
+                        <li><a href="#">Financially</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Our Publications</h1>
+        </section>
+
+        <section class="content publications-section">
+            <h2>Latest Publications</h2>
+
+            <div class="rectangle-container">
+                <div class="publications-grid">
+                    <div class="publication-item">
+                        <h3>Monthly Newsletter</h3>
+                        <p>Stay updated with our latest news and events.</p>
+                        <a href="newsletter.pdf" class="button">Read More</a>
+                    </div>
+                    <div class="publication-item">
+                        <h3>Annual Report 2023</h3>
+                        <p>A comprehensive overview of our activities and impact.</p>
+                        <a href="annual-report-2023.pdf" class="button">Read More</a>
+                    </div>
+                    <div class="publication-item">
+                        <h3>Research on Health</h3>
+                        <p>An in-depth study on our health programs.</p>
+                        <a href="health-initiatives.pdf" class="button">Read More</a>
+                    </div>
+                </div>
+
+                <div class="rectangle-below">
+                    <p>This is an additional section for further information or featured content. Add relevant details about other publications, upcoming events, or special announcements here.</p>
+                </div>
+
+                <div class="rectangle-below-second">
+                    <p>This is another section where you can add more information or highlights. It could contain additional resources, links, or announcements.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indian Red Cross. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/ircsofficial">Facebook</a></li>
+            <li><a href="https://x.com/search?q=%40IndianRedCross&amp%3Bsrc=typd">Twitter</a></li>
+            <li><a href="https://www.instagram.com/indianredcross1/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/ircsnewdelhi/">Linkedin</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
